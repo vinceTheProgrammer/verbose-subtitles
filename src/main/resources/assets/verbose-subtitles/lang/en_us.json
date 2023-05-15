@@ -1,0 +1,11 @@
+{
+  "text.autoconfig.verbose-subtitles.title": "Verbose Subtitles",
+  "text.autoconfig.verbose-subtitles.option.enabled": "Enabled",
+  "text.autoconfig.verbose-subtitles.option.enabled.@PrefixText": "General",
+  "text.autoconfig.verbose-subtitles.option.blacklistedSoundsArrayList": "Blacklisted Sounds",
+  "text.autoconfig.verbose-subtitles.option.blacklistedSoundsArrayList.@PrefixText": "Sound Blacklist",
+  "text.autoconfig.verbose-subtitles.option.showID": "Show Sound ID",
+  "text.autoconfig.verbose-subtitles.option.showVolume": "Show Sound Volume",
+  "text.autoconfig.verbose-subtitles.option.showPitch":  "Show Sound Pitch",
+  "text.autoconfig.verbose-subtitles.option.showVariant":  "Show Sound Variant"
+}

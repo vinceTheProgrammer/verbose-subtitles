@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "verbose-subtitles",
+  "version": "${version}",
+  "name": "Verbose Subtitles",
+  "description": "Displays sound information instead of subtitles.",
+  "authors": [
+    "vinceTheProgrammer",
+    "dicedpixels"
+  ],
+  "license": "MIT",
+  "icon": "assets/verbose-subtitles/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "io.github.vincetheprogrammer.verbosesubtitles.VerboseSubtitles"
+    ],
+    "modmenu": [
+      "io.github.vincetheprogrammer.verbosesubtitles.integration.VerboseSubtitlesModMenuIntegration"
+    ]
+  },
+  "mixins": [
+    "verbose-subtitles.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.19",
+    "minecraft": "~1.19.4",
+    "java": ">=17"
+  }
+}
