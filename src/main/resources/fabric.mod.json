@@ -8,6 +8,18 @@
     "vinceTheProgrammer",
     "dicedpixels"
   ],
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "https://discord.gg/VDB4ajvFEX"
+      }
+    }
+  },
+  "contact": {
+    "homepage": "https://modrinth.com/mod/verbose-subtitles",
+    "sources": "https://github.com/vinceTheProgrammer/verbose-subtitles",
+    "issues": "https://github.com/vinceTheProgrammer/verbose-subtitles/issues"
+  },
   "license": "MIT",
   "icon": "assets/verbose-subtitles/icon.png",
   "environment": "client",

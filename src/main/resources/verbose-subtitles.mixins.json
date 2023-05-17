@@ -3,13 +3,11 @@
   "package": "io.github.vincetheprogrammer.verbosesubtitles.mixin",
   "compatibilityLevel": "JAVA_17",
   "client": [
-    "MixinSubtitlesHud",
-    "WeightedSoundSetAccessor"
+    "MixinSubtitlesHud"
   ],
   "injectors": {
     "defaultRequire": 1
   },
   "mixins": [
-    "WeightedSoundSetAccessor"
   ]
 }

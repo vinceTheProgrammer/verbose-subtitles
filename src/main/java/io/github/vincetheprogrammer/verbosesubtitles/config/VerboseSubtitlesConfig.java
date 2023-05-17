@@ -1,14 +1,12 @@
 package io.github.vincetheprogrammer.verbosesubtitles.config;
 
-import io.github.vincetheprogrammer.verbosesubtitles.VerboseSubtitles;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.ConfigHolder;
 import me.shedaniel.autoconfig.annotation.Config;
 import me.shedaniel.autoconfig.annotation.ConfigEntry;
 import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
-import net.minecraft.text.Text;
-import net.minecraft.util.ActionResult;
+import net.minecraft.client.resource.language.I18n;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -21,8 +19,8 @@ public class VerboseSubtitlesConfig implements ConfigData {
     @ConfigEntry.Gui.Excluded
     private static ConfigHolder<VerboseSubtitlesConfig> CONFIG_HOLDER;
 //    @ConfigEntry.Category("general-category")
-    @ConfigEntry.Gui.PrefixText()
     public boolean enabled = true;
+    @ConfigEntry.Gui.PrefixText()
     @ConfigEntry.Gui.CollapsibleObject
     public OptionsId optionsId = new OptionsId();
     @ConfigEntry.Gui.CollapsibleObject
@@ -34,46 +32,46 @@ public class VerboseSubtitlesConfig implements ConfigData {
     @ConfigEntry.Gui.CollapsibleObject
     public OptionsPosition optionsPosition = new OptionsPosition();
     @ConfigEntry.Gui.PrefixText()
-    public List<String> blacklistedSounds = new ArrayList<String>();
+    public List<String> blacklistedSounds = new ArrayList<>();
 
 
     public static class OptionsId {
         public boolean showId = true;
         public boolean showLabel = true;
-        public String label = Text.translatable("text.autoconfig.verbose-subtitles.fullLabel.id").toString();
-
+        public String label = I18n.translate("text.autoconfig.verbose-subtitles.fullLabel.id");
+        @ConfigEntry.Gui.CollapsibleObject
         public LabelStyleId labelStyleId = new LabelStyleId();
     }
 
     public static class OptionsVolume {
         public boolean showVolume = true;
         public boolean showLabel = true;
-        public String label = Text.translatable("text.autoconfig.verbose-subtitles.fullLabel.volume").toString();
-
+        public String label = I18n.translate("text.autoconfig.verbose-subtitles.fullLabel.volume");
+        @ConfigEntry.Gui.CollapsibleObject
         public LabelStyleVolume labelStyleVolume = new LabelStyleVolume();
     }
 
     public static class OptionsPitch {
         public boolean showPitch = true;
         public boolean showLabel = true;
-        public String label = Text.translatable("text.autoconfig.verbose-subtitles.fullLabel.pitch").toString();
-
+        public String label = I18n.translate("text.autoconfig.verbose-subtitles.fullLabel.pitch");
+        @ConfigEntry.Gui.CollapsibleObject
         public LabelStylePitch labelStylePitch = new LabelStylePitch();
     }
 
     public static class OptionsVariant {
         public boolean showVariant = true;
         public boolean showLabel = true;
-        public String label = Text.translatable("text.autoconfig.verbose-subtitles.fullLabel.variant").toString();
-
+        public String label = I18n.translate("text.autoconfig.verbose-subtitles.fullLabel.variant");
+        @ConfigEntry.Gui.CollapsibleObject
         public LabelStyleVariant labelStyleVariant = new LabelStyleVariant();
     }
 
     public static class OptionsPosition {
         public boolean showPosition = true;
         public boolean showLabel = true;
-        public String label = Text.translatable("text.autoconfig.verbose-subtitles.fullLabel.position").toString();
-
+        public String label = I18n.translate("text.autoconfig.verbose-subtitles.fullLabel.position");
+        @ConfigEntry.Gui.CollapsibleObject
         public LabelStylePosition labelStylePosition = new LabelStylePosition();
     }
 
@@ -81,7 +79,6 @@ public class VerboseSubtitlesConfig implements ConfigData {
         public boolean obfuscated = false;
         public boolean bold = false;
         public boolean strikethrough = false;
-
         public boolean underline = false;
         public boolean italic = false;
         @ConfigEntry.ColorPicker
@@ -92,7 +89,6 @@ public class VerboseSubtitlesConfig implements ConfigData {
         public boolean obfuscated = false;
         public boolean bold = false;
         public boolean strikethrough = false;
-
         public boolean underline = false;
         public boolean italic = false;
         @ConfigEntry.ColorPicker
@@ -103,7 +99,6 @@ public class VerboseSubtitlesConfig implements ConfigData {
         public boolean obfuscated = false;
         public boolean bold = false;
         public boolean strikethrough = false;
-
         public boolean underline = false;
         public boolean italic = false;
         @ConfigEntry.ColorPicker
@@ -114,7 +109,6 @@ public class VerboseSubtitlesConfig implements ConfigData {
         public boolean obfuscated = false;
         public boolean bold = false;
         public boolean strikethrough = false;
-
         public boolean underline = false;
         public boolean italic = false;
         @ConfigEntry.ColorPicker
@@ -125,7 +119,6 @@ public class VerboseSubtitlesConfig implements ConfigData {
         public boolean obfuscated = false;
         public boolean bold = false;
         public boolean strikethrough = false;
-
         public boolean underline = false;
         public boolean italic = false;
         @ConfigEntry.ColorPicker

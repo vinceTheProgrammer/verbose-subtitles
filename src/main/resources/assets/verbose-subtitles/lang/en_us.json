@@ -5,37 +5,77 @@
 
   "text.autoconfig.verbose-subtitles.option.optionsId.@PrefixText": "Appearance",
   "text.autoconfig.verbose-subtitles.option.optionsId": "Sound ID",
-  "text.autoconfig.verbose-subtitles.option.optionsId.showID": "Show Sound ID",
+  "text.autoconfig.verbose-subtitles.option.optionsId.showId": "Show Sound ID",
   "text.autoconfig.verbose-subtitles.option.optionsId.showLabel": "Show Label",
   "text.autoconfig.verbose-subtitles.option.optionsId.label": "Label",
+  "text.autoconfig.verbose-subtitles.option.optionsId.labelStyleId": "Label Style",
+  "text.autoconfig.verbose-subtitles.option.optionsId.labelStyleId.obfuscated": "Obfuscated",
+  "text.autoconfig.verbose-subtitles.option.optionsId.labelStyleId.bold": "Bold",
+  "text.autoconfig.verbose-subtitles.option.optionsId.labelStyleId.strikethrough": "Strikethrough",
+  "text.autoconfig.verbose-subtitles.option.optionsId.labelStyleId.underline": "Underline",
+  "text.autoconfig.verbose-subtitles.option.optionsId.labelStyleId.italic": "Italic",
+  "text.autoconfig.verbose-subtitles.option.optionsId.labelStyleId.color": "Color",
+
 
   "text.autoconfig.verbose-subtitles.option.optionsVolume": "Sound Volume",
   "text.autoconfig.verbose-subtitles.option.optionsVolume.showVolume": "Show Sound Volume",
   "text.autoconfig.verbose-subtitles.option.optionsVolume.showLabel": "Show Label",
   "text.autoconfig.verbose-subtitles.option.optionsVolume.label": "Label",
+  "text.autoconfig.verbose-subtitles.option.optionsVolume.labelStyleVolume": "Label Style",
+  "text.autoconfig.verbose-subtitles.option.optionsVolume.labelStyleVolume.obfuscated": "Obfuscated",
+  "text.autoconfig.verbose-subtitles.option.optionsVolume.labelStyleVolume.bold": "Bold",
+  "text.autoconfig.verbose-subtitles.option.optionsVolume.labelStyleVolume.strikethrough": "Strikethrough",
+  "text.autoconfig.verbose-subtitles.option.optionsVolume.labelStyleVolume.underline": "Underline",
+  "text.autoconfig.verbose-subtitles.option.optionsVolume.labelStyleVolume.italic": "Italic",
+  "text.autoconfig.verbose-subtitles.option.optionsVolume.labelStyleVolume.color": "Color",
+
 
   "text.autoconfig.verbose-subtitles.option.optionsPitch":  "Sound Pitch",
   "text.autoconfig.verbose-subtitles.option.optionsPitch.showPitch":  "Show Sound Pitch",
   "text.autoconfig.verbose-subtitles.option.optionsPitch.showLabel": "Show Label",
   "text.autoconfig.verbose-subtitles.option.optionsPitch.label":  "Label",
+  "text.autoconfig.verbose-subtitles.option.optionsPitch.labelStylePitch": "Label Style",
+  "text.autoconfig.verbose-subtitles.option.optionsPitch.labelStylePitch.obfuscated": "Obfuscated",
+  "text.autoconfig.verbose-subtitles.option.optionsPitch.labelStylePitch.bold": "Bold",
+  "text.autoconfig.verbose-subtitles.option.optionsPitch.labelStylePitch.strikethrough": "Strikethrough",
+  "text.autoconfig.verbose-subtitles.option.optionsPitch.labelStylePitch.underline": "Underline",
+  "text.autoconfig.verbose-subtitles.option.optionsPitch.labelStylePitch.italic": "Italic",
+  "text.autoconfig.verbose-subtitles.option.optionsPitch.labelStylePitch.color": "Color",
+
 
   "text.autoconfig.verbose-subtitles.option.optionsVariant":  "Sound Variant",
   "text.autoconfig.verbose-subtitles.option.optionsVariant.showVariant":  "Show Sound Variant",
   "text.autoconfig.verbose-subtitles.option.optionsVariant.showLabel": "Show Label",
   "text.autoconfig.verbose-subtitles.option.optionsVariant.label":  "Label",
+  "text.autoconfig.verbose-subtitles.option.optionsVariant.labelStyleVariant": "Label Style",
+  "text.autoconfig.verbose-subtitles.option.optionsVariant.labelStyleVariant.obfuscated": "Obfuscated",
+  "text.autoconfig.verbose-subtitles.option.optionsVariant.labelStyleVariant.bold": "Bold",
+  "text.autoconfig.verbose-subtitles.option.optionsVariant.labelStyleVariant.strikethrough": "Strikethrough",
+  "text.autoconfig.verbose-subtitles.option.optionsVariant.labelStyleVariant.underline": "Underline",
+  "text.autoconfig.verbose-subtitles.option.optionsVariant.labelStyleVariant.italic": "Italic",
+  "text.autoconfig.verbose-subtitles.option.optionsVariant.labelStyleVariant.color": "Color",
+
 
   "text.autoconfig.verbose-subtitles.option.optionsPosition":  "Sound Position",
   "text.autoconfig.verbose-subtitles.option.optionsPosition.showPosition":  "Show Sound Position",
   "text.autoconfig.verbose-subtitles.option.optionsPosition.showLabel": "Show Label",
   "text.autoconfig.verbose-subtitles.option.optionsPosition.label":  "Label",
+  "text.autoconfig.verbose-subtitles.option.optionsPosition.labelStylePosition": "Label Style",
+  "text.autoconfig.verbose-subtitles.option.optionsPosition.labelStylePosition.obfuscated": "Obfuscated",
+  "text.autoconfig.verbose-subtitles.option.optionsPosition.labelStylePosition.bold": "Bold",
+  "text.autoconfig.verbose-subtitles.option.optionsPosition.labelStylePosition.strikethrough": "Strikethrough",
+  "text.autoconfig.verbose-subtitles.option.optionsPosition.labelStylePosition.underline": "Underline",
+  "text.autoconfig.verbose-subtitles.option.optionsPosition.labelStylePosition.italic": "Italic",
+  "text.autoconfig.verbose-subtitles.option.optionsPosition.labelStylePosition.color": "Color",
+
 
   "text.autoconfig.verbose-subtitles.option.blacklistedSounds.@PrefixText": "Datasets",
   "text.autoconfig.verbose-subtitles.option.blacklistedSounds": "Blacklisted Sounds",
 
-  "text.autoconfig.verbose-subtitles.fullLabel.id": "ID",
-  "text.autoconfig.verbose-subtitles.fullLabel.volume": "Volume",
-  "text.autoconfig.verbose-subtitles.fullLabel.pitch": "Pitch",
-  "text.autoconfig.verbose-subtitles.fullLabel.variant": "Variant",
-  "text.autoconfig.verbose-subtitles.fullLabel.position": "Position"
+  "text.autoconfig.verbose-subtitles.fullLabel.id": "ID: ",
+  "text.autoconfig.verbose-subtitles.fullLabel.volume": "Volume: ",
+  "text.autoconfig.verbose-subtitles.fullLabel.pitch": "Pitch: ",
+  "text.autoconfig.verbose-subtitles.fullLabel.variant": "Variant: ",
+  "text.autoconfig.verbose-subtitles.fullLabel.position": "Position: "
 
 }
