@@ -28,8 +28,7 @@ public class RemoveAutoBlacklistedSoundCommand {
         String blacklistedSoundString = commandContext.getArgument("sound", String.class);
         boolean success = VerboseSubtitlesConfig.INSTANCE.blacklistedSounds.remove(blacklistedSoundString);
         if (success) {
-            VerboseSubtitlesConfig.INSTANCE.loadBlacklistedSounds();
-            VerboseSubtitlesConfig.INSTANCE.getConfigHolder().save();
+            VerboseSubtitlesConfig.saveConfig();
             commandContext.getSource().sendFeedback(Text.of("Sound ID \"" + blacklistedSoundString + "\" removed from sound blacklist."));
             return 1;
         } else {

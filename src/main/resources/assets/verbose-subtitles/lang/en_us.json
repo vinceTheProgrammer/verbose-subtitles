@@ -1,11 +1,41 @@
 {
   "text.autoconfig.verbose-subtitles.title": "Verbose Subtitles",
+
   "text.autoconfig.verbose-subtitles.option.enabled": "Enabled",
-  "text.autoconfig.verbose-subtitles.option.enabled.@PrefixText": "General",
-  "text.autoconfig.verbose-subtitles.option.blacklistedSoundsArrayList": "Blacklisted Sounds",
-  "text.autoconfig.verbose-subtitles.option.blacklistedSoundsArrayList.@PrefixText": "Sound Blacklist",
-  "text.autoconfig.verbose-subtitles.option.showID": "Show Sound ID",
-  "text.autoconfig.verbose-subtitles.option.showVolume": "Show Sound Volume",
-  "text.autoconfig.verbose-subtitles.option.showPitch":  "Show Sound Pitch",
-  "text.autoconfig.verbose-subtitles.option.showVariant":  "Show Sound Variant"
+
+  "text.autoconfig.verbose-subtitles.option.optionsId.@PrefixText": "Appearance",
+  "text.autoconfig.verbose-subtitles.option.optionsId": "Sound ID",
+  "text.autoconfig.verbose-subtitles.option.optionsId.showID": "Show Sound ID",
+  "text.autoconfig.verbose-subtitles.option.optionsId.showLabel": "Show Label",
+  "text.autoconfig.verbose-subtitles.option.optionsId.label": "Label",
+
+  "text.autoconfig.verbose-subtitles.option.optionsVolume": "Sound Volume",
+  "text.autoconfig.verbose-subtitles.option.optionsVolume.showVolume": "Show Sound Volume",
+  "text.autoconfig.verbose-subtitles.option.optionsVolume.showLabel": "Show Label",
+  "text.autoconfig.verbose-subtitles.option.optionsVolume.label": "Label",
+
+  "text.autoconfig.verbose-subtitles.option.optionsPitch":  "Sound Pitch",
+  "text.autoconfig.verbose-subtitles.option.optionsPitch.showPitch":  "Show Sound Pitch",
+  "text.autoconfig.verbose-subtitles.option.optionsPitch.showLabel": "Show Label",
+  "text.autoconfig.verbose-subtitles.option.optionsPitch.label":  "Label",
+
+  "text.autoconfig.verbose-subtitles.option.optionsVariant":  "Sound Variant",
+  "text.autoconfig.verbose-subtitles.option.optionsVariant.showVariant":  "Show Sound Variant",
+  "text.autoconfig.verbose-subtitles.option.optionsVariant.showLabel": "Show Label",
+  "text.autoconfig.verbose-subtitles.option.optionsVariant.label":  "Label",
+
+  "text.autoconfig.verbose-subtitles.option.optionsPosition":  "Sound Position",
+  "text.autoconfig.verbose-subtitles.option.optionsPosition.showPosition":  "Show Sound Position",
+  "text.autoconfig.verbose-subtitles.option.optionsPosition.showLabel": "Show Label",
+  "text.autoconfig.verbose-subtitles.option.optionsPosition.label":  "Label",
+
+  "text.autoconfig.verbose-subtitles.option.blacklistedSounds.@PrefixText": "Datasets",
+  "text.autoconfig.verbose-subtitles.option.blacklistedSounds": "Blacklisted Sounds",
+
+  "text.autoconfig.verbose-subtitles.fullLabel.id": "ID",
+  "text.autoconfig.verbose-subtitles.fullLabel.volume": "Volume",
+  "text.autoconfig.verbose-subtitles.fullLabel.pitch": "Pitch",
+  "text.autoconfig.verbose-subtitles.fullLabel.variant": "Variant",
+  "text.autoconfig.verbose-subtitles.fullLabel.position": "Position"
+
 }

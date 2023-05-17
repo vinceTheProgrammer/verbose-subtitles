@@ -17,9 +17,6 @@ import java.util.List;
 public class VerboseSubtitlesModMenuIntegration implements ModMenuApi {
     @Override
     public ConfigScreenFactory<?> getModConfigScreenFactory() {
-        return (parent) -> {
-            VerboseSubtitlesConfig.INSTANCE.loadBlacklistedSounds();
-            return AutoConfig.getConfigScreen(VerboseSubtitlesConfig.class, parent).get();
-        };
+        return (parent) -> AutoConfig.getConfigScreen(VerboseSubtitlesConfig.class, parent).get();
     }
 }

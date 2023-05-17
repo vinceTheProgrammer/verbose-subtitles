@@ -10,6 +10,8 @@ import net.fabricmc.fabric.api.client.command.v2.FabricClientCommandSource;
 import net.minecraft.command.CommandRegistryAccess;
 import net.minecraft.text.Text;
 
+import java.util.HashSet;
+
 import static com.mojang.brigadier.arguments.StringArgumentType.string;
 
 public class AddCustomBlacklistedSoundCommand {
@@ -23,10 +25,11 @@ public class AddCustomBlacklistedSoundCommand {
     private static int run(CommandContext<FabricClientCommandSource> commandContext) throws CommandSyntaxException {
         VerboseSubtitles.LOGGER.info("Addo");
         String blacklistedSoundString = commandContext.getArgument("sound", String.class);
-        boolean success = VerboseSubtitlesConfig.INSTANCE.blacklistedSounds.add(blacklistedSoundString);
+        HashSet<String> blacklistedSoundsHashSet = new HashSet<>(VerboseSubtitlesConfig.INSTANCE.blacklistedSounds);
+        boolean success = blacklistedSoundsHashSet.add(blacklistedSoundString);
         if (success) {
-            VerboseSubtitlesConfig.INSTANCE.loadBlacklistedSounds();
-            VerboseSubtitlesConfig.INSTANCE.getConfigHolder().save();
+            VerboseSubtitlesConfig.INSTANCE.blacklistedSounds.add(blacklistedSoundString);
+            VerboseSubtitlesConfig.saveConfig();
             commandContext.getSource().sendFeedback(Text.of("Sound ID \"" + blacklistedSoundString + "\" added to sound blacklist."));
             return 1;
         } else {

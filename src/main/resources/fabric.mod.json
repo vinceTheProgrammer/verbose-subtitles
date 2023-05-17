@@ -3,7 +3,7 @@
   "id": "verbose-subtitles",
   "version": "${version}",
   "name": "Verbose Subtitles",
-  "description": "Displays sound information instead of subtitles.",
+  "description": "Provides options for more verbose in-game subtitles.",
   "authors": [
     "vinceTheProgrammer",
     "dicedpixels"
@@ -24,7 +24,10 @@
   ],
   "depends": {
     "fabricloader": ">=0.14.19",
+    "fabric-api": ">=0.80.0+1.19.4",
     "minecraft": "~1.19.4",
-    "java": ">=17"
+    "java": ">=17",
+    "cloth-config": ">=10.0.96",
+    "modmenu": ">=6.2.2"
   }
 }

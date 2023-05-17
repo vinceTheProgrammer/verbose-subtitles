@@ -17,9 +17,8 @@ public class ListBlacklistedSoundsCommand {
     }
 
     private static int run(CommandContext<FabricClientCommandSource> commandContext) throws CommandSyntaxException {
-        VerboseSubtitlesConfig.INSTANCE.getConfigHolder().load();
-        VerboseSubtitlesConfig.INSTANCE.saveBlacklistedSounds();
-        String blacklistedSoundsString = String.join("\n", VerboseSubtitlesConfig.INSTANCE.blacklistedSounds);
+        VerboseSubtitlesConfig.INSTANCE.validateConfig();
+        String blacklistedSoundsString = "Blacklisted Sounds: \n- " + String.join("\n- ", VerboseSubtitlesConfig.INSTANCE.blacklistedSounds);
         commandContext.getSource().sendFeedback(Text.of(blacklistedSoundsString));
         return 1;
     }

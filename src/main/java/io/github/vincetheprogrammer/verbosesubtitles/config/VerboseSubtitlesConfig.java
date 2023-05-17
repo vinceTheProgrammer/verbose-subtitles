@@ -7,6 +7,7 @@ import me.shedaniel.autoconfig.ConfigHolder;
 import me.shedaniel.autoconfig.annotation.Config;
 import me.shedaniel.autoconfig.annotation.ConfigEntry;
 import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
+import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 
 import java.util.ArrayList;
@@ -18,54 +19,148 @@ public class VerboseSubtitlesConfig implements ConfigData {
     @ConfigEntry.Gui.Excluded
     public static VerboseSubtitlesConfig INSTANCE;
     @ConfigEntry.Gui.Excluded
-    public HashSet<String> blacklistedSounds = new HashSet<String>();
+    private static ConfigHolder<VerboseSubtitlesConfig> CONFIG_HOLDER;
 //    @ConfigEntry.Category("general-category")
     @ConfigEntry.Gui.PrefixText()
     public boolean enabled = true;
-    public boolean showID = true;
-    public boolean showVolume = true;
-    public boolean showPitch = true;
-//    @ConfigEntry.Category("blacklist-category")
+    @ConfigEntry.Gui.CollapsibleObject
+    public OptionsId optionsId = new OptionsId();
+    @ConfigEntry.Gui.CollapsibleObject
+    public OptionsVolume optionsVolume = new OptionsVolume();
+    @ConfigEntry.Gui.CollapsibleObject
+    public OptionsPitch optionsPitch = new OptionsPitch();
+    @ConfigEntry.Gui.CollapsibleObject
+    public OptionsVariant optionsVariant = new OptionsVariant();
+    @ConfigEntry.Gui.CollapsibleObject
+    public OptionsPosition optionsPosition = new OptionsPosition();
     @ConfigEntry.Gui.PrefixText()
+    public List<String> blacklistedSounds = new ArrayList<String>();
 
-    private List<String> blacklistedSoundsArrayList = new ArrayList<String>();
-    public void saveBlacklistedSounds() {
-        VerboseSubtitles.LOGGER.info(blacklistedSoundsArrayList.toString());
-        blacklistedSounds = new HashSet<>(blacklistedSoundsArrayList);
-        VerboseSubtitles.LOGGER.info("saved: " + blacklistedSounds);
+
+    public static class OptionsId {
+        public boolean showId = true;
+        public boolean showLabel = true;
+        public String label = Text.translatable("text.autoconfig.verbose-subtitles.fullLabel.id").toString();
+
+        public LabelStyleId labelStyleId = new LabelStyleId();
     }
 
-    public void loadBlacklistedSounds() {
-        blacklistedSoundsArrayList = new ArrayList<String>(blacklistedSounds);
-        VerboseSubtitles.LOGGER.info("loaded");
+    public static class OptionsVolume {
+        public boolean showVolume = true;
+        public boolean showLabel = true;
+        public String label = Text.translatable("text.autoconfig.verbose-subtitles.fullLabel.volume").toString();
+
+        public LabelStyleVolume labelStyleVolume = new LabelStyleVolume();
+    }
+
+    public static class OptionsPitch {
+        public boolean showPitch = true;
+        public boolean showLabel = true;
+        public String label = Text.translatable("text.autoconfig.verbose-subtitles.fullLabel.pitch").toString();
+
+        public LabelStylePitch labelStylePitch = new LabelStylePitch();
+    }
+
+    public static class OptionsVariant {
+        public boolean showVariant = true;
+        public boolean showLabel = true;
+        public String label = Text.translatable("text.autoconfig.verbose-subtitles.fullLabel.variant").toString();
+
+        public LabelStyleVariant labelStyleVariant = new LabelStyleVariant();
+    }
+
+    public static class OptionsPosition {
+        public boolean showPosition = true;
+        public boolean showLabel = true;
+        public String label = Text.translatable("text.autoconfig.verbose-subtitles.fullLabel.position").toString();
+
+        public LabelStylePosition labelStylePosition = new LabelStylePosition();
+    }
+
+    public static class LabelStyleId {
+        public boolean obfuscated = false;
+        public boolean bold = false;
+        public boolean strikethrough = false;
+
+        public boolean underline = false;
+        public boolean italic = false;
+        @ConfigEntry.ColorPicker
+        public int color = 0xffffff;
+    }
+
+    public static class LabelStyleVolume {
+        public boolean obfuscated = false;
+        public boolean bold = false;
+        public boolean strikethrough = false;
+
+        public boolean underline = false;
+        public boolean italic = false;
+        @ConfigEntry.ColorPicker
+        public int color = 0xffffff;
+    }
+
+    public static class LabelStylePitch {
+        public boolean obfuscated = false;
+        public boolean bold = false;
+        public boolean strikethrough = false;
+
+        public boolean underline = false;
+        public boolean italic = false;
+        @ConfigEntry.ColorPicker
+        public int color = 0xffffff;
+    }
+
+    public static class LabelStyleVariant {
+        public boolean obfuscated = false;
+        public boolean bold = false;
+        public boolean strikethrough = false;
+
+        public boolean underline = false;
+        public boolean italic = false;
+        @ConfigEntry.ColorPicker
+        public int color = 0xffffff;
+    }
+
+    public static class LabelStylePosition {
+        public boolean obfuscated = false;
+        public boolean bold = false;
+        public boolean strikethrough = false;
+
+        public boolean underline = false;
+        public boolean italic = false;
+        @ConfigEntry.ColorPicker
+        public int color = 0xffffff;
     }
 
     @Override
     public void validatePostLoad() throws ValidationException {
         ConfigData.super.validatePostLoad();
-        blacklistedSoundsArrayList = new ArrayList<String>(blacklistedSounds);
-        VerboseSubtitles.LOGGER.info("post load: " + blacklistedSounds);
+        validateConfig();
     }
 
-    public ConfigHolder<VerboseSubtitlesConfig> getConfigHolder() {
-         return AutoConfig.getConfigHolder(VerboseSubtitlesConfig.class);
+    private static ConfigHolder<VerboseSubtitlesConfig> getConfigHolder() {
+        if (CONFIG_HOLDER == null) {
+            ConfigHolder<VerboseSubtitlesConfig> configHolder = AutoConfig.getConfigHolder(VerboseSubtitlesConfig.class);
+            CONFIG_HOLDER = configHolder;
+            return configHolder;
+        } else {
+            return CONFIG_HOLDER;
+        }
+    }
+
+    public static void saveConfig() {
+        getConfigHolder().save();
+    }
+
+    public void validateConfig() {
+        HashSet<String> blacklistedSoundsHashSet = new HashSet<>(blacklistedSounds);
+        blacklistedSounds = new ArrayList<>(blacklistedSoundsHashSet);
     }
 
     public static void init() { }
 
     static {
         AutoConfig.register(VerboseSubtitlesConfig.class, GsonConfigSerializer::new);
-        ConfigHolder<VerboseSubtitlesConfig> holder = AutoConfig.getConfigHolder(VerboseSubtitlesConfig.class);
-        INSTANCE = holder.getConfig();
-        holder.registerSaveListener((configHolder, configData) -> {
-            VerboseSubtitlesConfig.INSTANCE.saveBlacklistedSounds();
-            return ActionResult.PASS;
-        });
-        holder.registerLoadListener(((configHolder, verboseSubtitlesConfig) -> {
-            VerboseSubtitlesConfig.INSTANCE.loadBlacklistedSounds();;
-            return  ActionResult.PASS;
-        }));
-
-
+        INSTANCE = getConfigHolder().getConfig();
     }
 }
