@@ -1,0 +1,83 @@
+{
+  "text.autoconfig.verbose-subtitles.title": "Verbose Subtitles",
+
+  "text.autoconfig.verbose-subtitles.option.enabled": "Включён",
+
+  "text.autoconfig.verbose-subtitles.option.optionsId.@PrefixText": "Оформление",
+  "text.autoconfig.verbose-subtitles.option.optionsId": "Идентификатор звука",
+  "text.autoconfig.verbose-subtitles.option.optionsId.showId": "Отображать идентификатор",
+  "text.autoconfig.verbose-subtitles.option.optionsId.showLabel": "Показывать обозначение",
+  "text.autoconfig.verbose-subtitles.option.optionsId.label": "Обозначение",
+  "text.autoconfig.verbose-subtitles.option.optionsId.labelStyleId": "Стиль обозначения",
+  "text.autoconfig.verbose-subtitles.option.optionsId.labelStyleId.obfuscated": "§k.§rЗапутанный§k.§r",
+  "text.autoconfig.verbose-subtitles.option.optionsId.labelStyleId.bold": "§lПолужирный§r",
+  "text.autoconfig.verbose-subtitles.option.optionsId.labelStyleId.strikethrough": "§mЗачёркнутый§r",
+  "text.autoconfig.verbose-subtitles.option.optionsId.labelStyleId.underline": "§nПодчёркнутый§r",
+  "text.autoconfig.verbose-subtitles.option.optionsId.labelStyleId.italic": "§oКурсив§r",
+  "text.autoconfig.verbose-subtitles.option.optionsId.labelStyleId.color": "§f§mЦ§cв§aе§9т§r",
+
+
+  "text.autoconfig.verbose-subtitles.option.optionsVolume": "Громкость звука",
+  "text.autoconfig.verbose-subtitles.option.optionsVolume.showVolume": "Отображать громкость",
+  "text.autoconfig.verbose-subtitles.option.optionsVolume.showLabel": "Показывать обозначение",
+  "text.autoconfig.verbose-subtitles.option.optionsVolume.label": "Обозначение",
+  "text.autoconfig.verbose-subtitles.option.optionsVolume.labelStyleVolume": "Стиль обозначения",
+  "text.autoconfig.verbose-subtitles.option.optionsVolume.labelStyleVolume.obfuscated": "§k.§rЗапутанный§k.§r",
+  "text.autoconfig.verbose-subtitles.option.optionsVolume.labelStyleVolume.bold": "§lПолужирный§r",
+  "text.autoconfig.verbose-subtitles.option.optionsVolume.labelStyleVolume.strikethrough": "§mЗачёркнутый§r",
+  "text.autoconfig.verbose-subtitles.option.optionsVolume.labelStyleVolume.underline": "§nПодчёркнутый§r",
+  "text.autoconfig.verbose-subtitles.option.optionsVolume.labelStyleVolume.italic": "§oКурсив§r",
+  "text.autoconfig.verbose-subtitles.option.optionsVolume.labelStyleVolume.color": "§f§mЦ§cв§aе§9т§r",
+
+
+  "text.autoconfig.verbose-subtitles.option.optionsPitch":  "Высота звука",
+  "text.autoconfig.verbose-subtitles.option.optionsPitch.showPitch":  "Отображать высоту",
+  "text.autoconfig.verbose-subtitles.option.optionsPitch.showLabel": "Показывать обозначение",
+  "text.autoconfig.verbose-subtitles.option.optionsPitch.label":  "Обозначение",
+  "text.autoconfig.verbose-subtitles.option.optionsPitch.labelStylePitch": "Стиль обозначения",
+  "text.autoconfig.verbose-subtitles.option.optionsPitch.labelStylePitch.obfuscated": "§k.§rЗапутанный§k.§r",
+  "text.autoconfig.verbose-subtitles.option.optionsPitch.labelStylePitch.bold": "§lПолужирный§r",
+  "text.autoconfig.verbose-subtitles.option.optionsPitch.labelStylePitch.strikethrough": "§mЗачёркнутый§r",
+  "text.autoconfig.verbose-subtitles.option.optionsPitch.labelStylePitch.underline": "§nПодчёркнутый§r",
+  "text.autoconfig.verbose-subtitles.option.optionsPitch.labelStylePitch.italic": "§oКурсив§r",
+  "text.autoconfig.verbose-subtitles.option.optionsPitch.labelStylePitch.color": "§f§mЦ§cв§aе§9т§r",
+
+
+  "text.autoconfig.verbose-subtitles.option.optionsVariant":  "Вариация звука",
+  "text.autoconfig.verbose-subtitles.option.optionsVariant.showVariant":  "Отображать вариацию",
+  "text.autoconfig.verbose-subtitles.option.optionsVariant.showLabel": "Показывать обозначение",
+  "text.autoconfig.verbose-subtitles.option.optionsVariant.label":  "Обозначение",
+  "text.autoconfig.verbose-subtitles.option.optionsVariant.labelStyleVariant": "Стиль обозначения",
+  "text.autoconfig.verbose-subtitles.option.optionsVariant.labelStyleVariant.obfuscated": "§k.§rЗапутанный§k.§r",
+  "text.autoconfig.verbose-subtitles.option.optionsVariant.labelStyleVariant.bold": "§lПолужирный§r",
+  "text.autoconfig.verbose-subtitles.option.optionsVariant.labelStyleVariant.strikethrough": "§mЗачёркнутый§r",
+  "text.autoconfig.verbose-subtitles.option.optionsVariant.labelStyleVariant.underline": "§nПодчёркнутый§r",
+  "text.autoconfig.verbose-subtitles.option.optionsVariant.labelStyleVariant.italic": "§oКурсив§r",
+  "text.autoconfig.verbose-subtitles.option.optionsVariant.labelStyleVariant.color": "§f§mЦ§cв§aе§9т§r",
+
+
+  "text.autoconfig.verbose-subtitles.option.optionsPosition":  "Позиция звука",
+  "text.autoconfig.verbose-subtitles.option.optionsPosition.showPosition":  "Отображать позицию",
+  "text.autoconfig.verbose-subtitles.option.optionsPosition.showLabel": "Показывать обозначение",
+  "text.autoconfig.verbose-subtitles.option.optionsPosition.label":  "Обозначение",
+  "text.autoconfig.verbose-subtitles.option.optionsPosition.labelStylePosition": "Стиль обозначения",
+  "text.autoconfig.verbose-subtitles.option.optionsPosition.labelStylePosition.obfuscated": "§k.§rЗапутанный§k.§r",
+  "text.autoconfig.verbose-subtitles.option.optionsPosition.labelStylePosition.bold": "§lПолужирный§r",
+  "text.autoconfig.verbose-subtitles.option.optionsPosition.labelStylePosition.strikethrough": "§mЗачёркнутый§r",
+  "text.autoconfig.verbose-subtitles.option.optionsPosition.labelStylePosition.underline": "§nПодчёркнутый§r",
+  "text.autoconfig.verbose-subtitles.option.optionsPosition.labelStylePosition.italic": "§oКурсив§r",
+  "text.autoconfig.verbose-subtitles.option.optionsPosition.labelStylePosition.color": "§f§mЦ§cв§aе§9т§r",
+
+
+  "text.autoconfig.verbose-subtitles.option.blacklistedSounds.@PrefixText": "Списки данных",
+  "text.autoconfig.verbose-subtitles.option.blacklistedSounds": "Чёрный список звуков",
+
+  "text.autoconfig.verbose-subtitles.fullLabel.id": "Идентификатор: ",
+  "text.autoconfig.verbose-subtitles.fullLabel.volume": "Громкость: ",
+  "text.autoconfig.verbose-subtitles.fullLabel.pitch": "Высота: ",
+  "text.autoconfig.verbose-subtitles.fullLabel.variant": "Вариация: ",
+  "text.autoconfig.verbose-subtitles.fullLabel.position": "Позиция: ",
+
+  "modmenu.summaryTranslation.verbose-subtitles": "Новые настройки для более подробных игровых субтитров.",
+  "modmenu.descriptionTranslation.verbose-subtitles": "Просматривайте в субтитрах дополнительную информацию о различных звуках, играющих в мире."
+}
