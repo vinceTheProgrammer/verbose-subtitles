@@ -20,3 +20,4 @@ View additional information for the various sounds played in game. Replaces vani
 # Additional Credits
 - Nia for posting the mod idea
 - dicedpixels for creating the initial core mixin
+- Felix14_v2 for Russian localization
