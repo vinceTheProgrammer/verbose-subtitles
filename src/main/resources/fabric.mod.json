@@ -6,7 +6,8 @@
   "description": "Provides options for more verbose in-game subtitles.",
   "authors": [
     "vinceTheProgrammer",
-    "dicedpixels"
+    "dicedpixels",
+    "Felix14_v2"
   ],
   "custom": {
     "modmenu": {
