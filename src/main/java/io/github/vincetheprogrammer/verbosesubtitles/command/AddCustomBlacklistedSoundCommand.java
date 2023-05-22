@@ -3,7 +3,6 @@ package io.github.vincetheprogrammer.verbosesubtitles.command;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
-import io.github.vincetheprogrammer.verbosesubtitles.VerboseSubtitles;
 import io.github.vincetheprogrammer.verbosesubtitles.config.VerboseSubtitlesConfig;
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandManager;
 import net.fabricmc.fabric.api.client.command.v2.FabricClientCommandSource;

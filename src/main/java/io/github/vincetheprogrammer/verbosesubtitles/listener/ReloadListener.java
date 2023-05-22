@@ -1,6 +1,5 @@
 package io.github.vincetheprogrammer.verbosesubtitles.listener;
 
-import io.github.vincetheprogrammer.verbosesubtitles.VerboseSubtitles;
 import io.github.vincetheprogrammer.verbosesubtitles.config.VerboseSubtitlesConfig;
 import net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener;
 import net.minecraft.resource.ResourceManager;
