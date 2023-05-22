@@ -17,7 +17,6 @@ public class ReloadListener implements SimpleSynchronousResourceReloadListener {
 
     @Override
     public void reload(ResourceManager manager) {
-        VerboseSubtitles.LOGGER.info("OPPPOOO");
         if (firstRun) {
             VerboseSubtitlesConfig.init();
             firstRun = false;

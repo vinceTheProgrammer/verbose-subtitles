@@ -23,7 +23,6 @@ public class AddCustomBlacklistedSoundCommand {
     }
 
     private static int run(CommandContext<FabricClientCommandSource> commandContext) throws CommandSyntaxException {
-        VerboseSubtitles.LOGGER.info("Addo");
         String blacklistedSoundString = commandContext.getArgument("sound", String.class);
         HashSet<String> blacklistedSoundsHashSet = new HashSet<>(VerboseSubtitlesConfig.INSTANCE.blacklistedSounds);
         boolean success = blacklistedSoundsHashSet.add(blacklistedSoundString);
