@@ -68,6 +68,8 @@
   "text.autoconfig.verbose-subtitles.option.optionsPosition.labelStylePosition.italic": "Italic",
   "text.autoconfig.verbose-subtitles.option.optionsPosition.labelStylePosition.color": "Color",
 
+  "text.autoconfig.verbose-subtitles.option.logToFile.@PrefixText": "Misc",
+  "text.autoconfig.verbose-subtitles.option.logToFile": "Log Subtitles To File",
 
   "text.autoconfig.verbose-subtitles.option.blacklistedSounds.@PrefixText": "Datasets",
   "text.autoconfig.verbose-subtitles.option.blacklistedSounds": "Blacklisted Sounds",

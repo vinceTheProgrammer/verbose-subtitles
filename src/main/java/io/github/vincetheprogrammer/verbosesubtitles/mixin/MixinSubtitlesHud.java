@@ -1,5 +1,6 @@
 package io.github.vincetheprogrammer.verbosesubtitles.mixin;
 
+import io.github.vincetheprogrammer.verbosesubtitles.VerboseSubtitles;
 import io.github.vincetheprogrammer.verbosesubtitles.config.VerboseSubtitlesConfig;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.hud.SubtitlesHud;
@@ -19,6 +20,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+import java.io.IOException;
 import java.util.List;
 
 // Credit for most of this class goes to dicedpixels
@@ -79,7 +81,20 @@ abstract class MixinSubtitlesHud {
                     if (VerboseSubtitlesConfig.INSTANCE.optionsPosition.showPosition) text.append(getRelativePositionString(sound)).append(" ");
                 }
 
-                this.entries.add(new SubtitleEntry(text, new Vec3d(sound.getX(), sound.getY(), sound.getZ())));
+                SubtitleEntry newEntry = new SubtitleEntry(text, new Vec3d(sound.getX(), sound.getY(), sound.getZ()));
+
+                if (!VerboseSubtitlesConfig.INSTANCE.logToFile) VerboseSubtitles.closeFileWriter();
+
+                if (VerboseSubtitlesConfig.INSTANCE.logToFile && VerboseSubtitles.getFileWriter() != null) {
+                    try {
+                        VerboseSubtitles.getFileWriter().write(newEntry.getText().getString() + System.lineSeparator());
+                        VerboseSubtitles.getFileWriter().flush();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+                this.entries.add(newEntry);
                 ci.cancel();
             } else {
                 ci.cancel();

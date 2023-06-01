@@ -68,7 +68,6 @@
   "text.autoconfig.verbose-subtitles.option.optionsPosition.labelStylePosition.italic": "§oКурсив§r",
   "text.autoconfig.verbose-subtitles.option.optionsPosition.labelStylePosition.color": "§f§mЦ§cв§aе§9т§r",
 
-
   "text.autoconfig.verbose-subtitles.option.blacklistedSounds.@PrefixText": "Списки данных",
   "text.autoconfig.verbose-subtitles.option.blacklistedSounds": "Чёрный список звуков",
 

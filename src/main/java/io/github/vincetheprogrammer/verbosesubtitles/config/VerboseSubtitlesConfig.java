@@ -32,6 +32,8 @@ public class VerboseSubtitlesConfig implements ConfigData {
     @ConfigEntry.Gui.CollapsibleObject
     public OptionsPosition optionsPosition = new OptionsPosition();
     @ConfigEntry.Gui.PrefixText()
+    public boolean logToFile = false;
+    @ConfigEntry.Gui.PrefixText()
     public List<String> blacklistedSounds = new ArrayList<>();
 
 
