@@ -1,0 +1,85 @@
+{
+  "text.autoconfig.verbose-subtitles.title": "Verbose Subtitles",
+
+  "text.autoconfig.verbose-subtitles.option.enabled": "Кушык",
+
+  "text.autoconfig.verbose-subtitles.option.optionsId.@PrefixText": "Бизәү",
+  "text.autoconfig.verbose-subtitles.option.optionsId": "Тавышның ID",
+  "text.autoconfig.verbose-subtitles.option.optionsId.showId": "Тавышның ID күрсәтү",
+  "text.autoconfig.verbose-subtitles.option.optionsId.showLabel": "Билгене күрсәтү",
+  "text.autoconfig.verbose-subtitles.option.optionsId.label":  "Билге",
+  "text.autoconfig.verbose-subtitles.option.optionsId.labelStyleId": "Билге стиле",
+  "text.autoconfig.verbose-subtitles.option.optionsId.labelStyleId.obfuscated": "Бутау",
+  "text.autoconfig.verbose-subtitles.option.optionsId.labelStyleId.bold": "Калын",
+  "text.autoconfig.verbose-subtitles.option.optionsId.labelStyleId.strikethrough": "Cызау",
+  "text.autoconfig.verbose-subtitles.option.optionsId.labelStyleId.underline": "Ассызыклау",
+  "text.autoconfig.verbose-subtitles.option.optionsId.labelStyleId.italic": "Курсив",
+  "text.autoconfig.verbose-subtitles.option.optionsId.labelStyleId.color": "Төс",
+
+
+  "text.autoconfig.verbose-subtitles.option.optionsVolume": "Тавыш катылыгы",
+  "text.autoconfig.verbose-subtitles.option.optionsVolume.showVolume": "Тавыш катылыгын күрсәтү",
+  "text.autoconfig.verbose-subtitles.option.optionsVolume.showLabel": "Билгене күрсәтү",
+  "text.autoconfig.verbose-subtitles.option.optionsVolume.label":  "Билге",
+  "text.autoconfig.verbose-subtitles.option.optionsVolume.labelStyleVolume": "Билге стиле",
+  "text.autoconfig.verbose-subtitles.option.optionsVolume.labelStyleVolume.obfuscated": "Бутау",
+  "text.autoconfig.verbose-subtitles.option.optionsVolume.labelStyleVolume.bold": "Калын",
+  "text.autoconfig.verbose-subtitles.option.optionsVolume.labelStyleVolume.strikethrough": "Cызау",
+  "text.autoconfig.verbose-subtitles.option.optionsVolume.labelStyleVolume.underline": "Ассызыклау",
+  "text.autoconfig.verbose-subtitles.option.optionsVolume.labelStyleVolume.italic": "Курсив",
+  "text.autoconfig.verbose-subtitles.option.optionsVolume.labelStyleVolume.color": "Төс",
+
+
+  "text.autoconfig.verbose-subtitles.option.optionsPitch":  "Тавыш тоны",
+  "text.autoconfig.verbose-subtitles.option.optionsPitch.showPitch":  "Тавыш тонын күрсәтү",
+  "text.autoconfig.verbose-subtitles.option.optionsPitch.showLabel": "Билгене күрсәтү",
+  "text.autoconfig.verbose-subtitles.option.optionsPitch.label":  "Билге",
+  "text.autoconfig.verbose-subtitles.option.optionsPitch.labelStylePitch": "Билге стиле",
+  "text.autoconfig.verbose-subtitles.option.optionsPitch.labelStylePitch.obfuscated": "Бутау",
+  "text.autoconfig.verbose-subtitles.option.optionsPitch.labelStylePitch.bold": "Калын",
+  "text.autoconfig.verbose-subtitles.option.optionsPitch.labelStylePitch.strikethrough": "Cызау",
+  "text.autoconfig.verbose-subtitles.option.optionsPitch.labelStylePitch.underline": "Ассызыклау",
+  "text.autoconfig.verbose-subtitles.option.optionsPitch.labelStylePitch.italic": "Курсив",
+  "text.autoconfig.verbose-subtitles.option.optionsPitch.labelStylePitch.color": "Төс",
+
+
+  "text.autoconfig.verbose-subtitles.option.optionsVariant":  "Тавыш төре",
+  "text.autoconfig.verbose-subtitles.option.optionsVariant.showVariant":  "Тавыш төрен күрсәтү",
+  "text.autoconfig.verbose-subtitles.option.optionsVariant.showLabel": "Билгене күрсәтү",
+  "text.autoconfig.verbose-subtitles.option.optionsVariant.label":  "Билге",
+  "text.autoconfig.verbose-subtitles.option.optionsVariant.labelStyleVariant": "Билге стиле",
+  "text.autoconfig.verbose-subtitles.option.optionsVariant.labelStyleVariant.obfuscated": "Бутау",
+  "text.autoconfig.verbose-subtitles.option.optionsVariant.labelStyleVariant.bold": "Калын",
+  "text.autoconfig.verbose-subtitles.option.optionsVariant.labelStyleVariant.strikethrough": "Cызау",
+  "text.autoconfig.verbose-subtitles.option.optionsVariant.labelStyleVariant.underline": "Ассызыклау",
+  "text.autoconfig.verbose-subtitles.option.optionsVariant.labelStyleVariant.italic": "Курсив",
+  "text.autoconfig.verbose-subtitles.option.optionsVariant.labelStyleVariant.color": "Төс",
+
+
+  "text.autoconfig.verbose-subtitles.option.optionsPosition":  "Тавыш урыны",
+  "text.autoconfig.verbose-subtitles.option.optionsPosition.showPosition":  "Тавыш урынын күрсәтү",
+  "text.autoconfig.verbose-subtitles.option.optionsPosition.showLabel": "Билгене күрсәтү",
+  "text.autoconfig.verbose-subtitles.option.optionsPosition.label":  "Билге",
+  "text.autoconfig.verbose-subtitles.option.optionsPosition.labelStylePosition": "Билге стиле",
+  "text.autoconfig.verbose-subtitles.option.optionsPosition.labelStylePosition.obfuscated": "Бутау",
+  "text.autoconfig.verbose-subtitles.option.optionsPosition.labelStylePosition.bold": "Калын",
+  "text.autoconfig.verbose-subtitles.option.optionsPosition.labelStylePosition.strikethrough": "Cызау",
+  "text.autoconfig.verbose-subtitles.option.optionsPosition.labelStylePosition.underline": "Ассызыклау",
+  "text.autoconfig.verbose-subtitles.option.optionsPosition.labelStylePosition.italic": "Курсив",
+  "text.autoconfig.verbose-subtitles.option.optionsPosition.labelStylePosition.color": "Төс",
+
+  "text.autoconfig.verbose-subtitles.option.logToFile.@PrefixText": "Төрле",
+  "text.autoconfig.verbose-subtitles.option.logToFile": "Субтитрларны файлга җыю",
+
+  "text.autoconfig.verbose-subtitles.option.blacklistedSounds.@PrefixText": "Мәгълүмат җыентыгы",
+  "text.autoconfig.verbose-subtitles.option.blacklistedSounds": "Кара исемлектәге тавышлар",
+
+  "text.autoconfig.verbose-subtitles.fullLabel.id": "ID: ",
+  "text.autoconfig.verbose-subtitles.fullLabel.volume": "Катылык: ",
+  "text.autoconfig.verbose-subtitles.fullLabel.pitch": "Тон: ",
+  "text.autoconfig.verbose-subtitles.fullLabel.variant": "Төр: ",
+  "text.autoconfig.verbose-subtitles.fullLabel.position": "Урын: ",
+
+  "modmenu.summaryTranslation.verbose-subtitles": "Тәфсиллерәк уендагы субтитрлар өчен яңа көйләүләр.",
+  "modmenu.descriptionTranslation.verbose-subtitles": "Дөньяда уйнатылган төрле тавышлар турында өстәмә мәгълүмат субтитрларда карагыз."
+}
