@@ -21,3 +21,5 @@ View additional information for the various sounds played in game. Replaces vani
 - Nia for posting the mod idea
 - dicedpixels for creating the initial core mixin
 - Felix14_v2 for Russian localization
+- DerpDerpling for updating the mod to 1.20
+- Amirhan-Taipovjan-Greatest-I for Tatar localization

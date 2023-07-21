@@ -6,7 +6,6 @@ import me.shedaniel.autoconfig.ConfigHolder;
 import me.shedaniel.autoconfig.annotation.Config;
 import me.shedaniel.autoconfig.annotation.ConfigEntry;
 import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
-import net.minecraft.client.resource.language.I18n;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -40,7 +39,7 @@ public class VerboseSubtitlesConfig implements ConfigData {
     public static class OptionsId {
         public boolean showId = true;
         public boolean showLabel = true;
-        public String label = I18n.translate("text.autoconfig.verbose-subtitles.fullLabel.id");
+        public String label = "ID: ";
         @ConfigEntry.Gui.CollapsibleObject
         public LabelStyleId labelStyleId = new LabelStyleId();
     }
@@ -48,7 +47,7 @@ public class VerboseSubtitlesConfig implements ConfigData {
     public static class OptionsVolume {
         public boolean showVolume = true;
         public boolean showLabel = true;
-        public String label = I18n.translate("text.autoconfig.verbose-subtitles.fullLabel.volume");
+        public String label = "Volume: ";
         @ConfigEntry.Gui.CollapsibleObject
         public LabelStyleVolume labelStyleVolume = new LabelStyleVolume();
     }
@@ -56,7 +55,7 @@ public class VerboseSubtitlesConfig implements ConfigData {
     public static class OptionsPitch {
         public boolean showPitch = true;
         public boolean showLabel = true;
-        public String label = I18n.translate("text.autoconfig.verbose-subtitles.fullLabel.pitch");
+        public String label = "Pitch: ";
         @ConfigEntry.Gui.CollapsibleObject
         public LabelStylePitch labelStylePitch = new LabelStylePitch();
     }
@@ -64,7 +63,7 @@ public class VerboseSubtitlesConfig implements ConfigData {
     public static class OptionsVariant {
         public boolean showVariant = true;
         public boolean showLabel = true;
-        public String label = I18n.translate("text.autoconfig.verbose-subtitles.fullLabel.variant");
+        public String label = "Variant: ";
         @ConfigEntry.Gui.CollapsibleObject
         public LabelStyleVariant labelStyleVariant = new LabelStyleVariant();
     }
@@ -72,7 +71,7 @@ public class VerboseSubtitlesConfig implements ConfigData {
     public static class OptionsPosition {
         public boolean showPosition = true;
         public boolean showLabel = true;
-        public String label = I18n.translate("text.autoconfig.verbose-subtitles.fullLabel.position");
+        public String label = "Position: ";
         @ConfigEntry.Gui.CollapsibleObject
         public LabelStylePosition labelStylePosition = new LabelStylePosition();
     }
