@@ -1,5 +1,5 @@
 {
-  "text.autoconfig.verbose-subtitles.title": "Verbose Subtitles",
+  "text.autoconfig.verbose-subtitles.title": "Verbose Subtitles көйләүләре",
 
   "text.autoconfig.verbose-subtitles.option.enabled": "Кушык",
 
@@ -30,8 +30,8 @@
   "text.autoconfig.verbose-subtitles.option.optionsVolume.labelStyleVolume.color": "Төс",
 
 
-  "text.autoconfig.verbose-subtitles.option.optionsPitch":  "Тавыш тоны",
-  "text.autoconfig.verbose-subtitles.option.optionsPitch.showPitch":  "Тавыш тонын күрсәтү",
+  "text.autoconfig.verbose-subtitles.option.optionsPitch":  "Тавыш югарылыгы",
+  "text.autoconfig.verbose-subtitles.option.optionsPitch.showPitch":  "Тавыш югарылыгын күрсәтү",
   "text.autoconfig.verbose-subtitles.option.optionsPitch.showLabel": "Билгене күрсәтү",
   "text.autoconfig.verbose-subtitles.option.optionsPitch.label":  "Билге",
   "text.autoconfig.verbose-subtitles.option.optionsPitch.labelStylePitch": "Билге стиле",
@@ -76,7 +76,7 @@
 
   "text.autoconfig.verbose-subtitles.fullLabel.id": "ID: ",
   "text.autoconfig.verbose-subtitles.fullLabel.volume": "Катылык: ",
-  "text.autoconfig.verbose-subtitles.fullLabel.pitch": "Тон: ",
+  "text.autoconfig.verbose-subtitles.fullLabel.pitch": "Югарылык: ",
   "text.autoconfig.verbose-subtitles.fullLabel.variant": "Төр: ",
   "text.autoconfig.verbose-subtitles.fullLabel.position": "Урын: ",
 
