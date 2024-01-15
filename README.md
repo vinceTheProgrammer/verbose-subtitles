@@ -1,23 +1,29 @@
 # Verbose Subtitles
 View additional information for the various sounds played in game. Replaces vanilla subtitles when enabled.
 
-# Existing Features (v1.3.0)
+## Features
 - Can be disabled in-game without removing mod
-- Small selection of customization options available
+- Robust set of customization options
 - Blacklist to prevent certain sounds from displaying at all
 - Client-side commands for managing sound blacklist
 
-# Planned Features
+## Available sound properties
+- sound ID
+- sound Display Name (the vanilla subtitle)
+- sound Volume
+- sound Pitch
+- sound Variant (the exact variant of the sound based on the actual sound file played)
+- sound Position (relative to the player)
+  
+## Planned Features
 - Ignore list to fallback to vanilla behavior for certain sounds
-- More robust customization options
 - Fallback to custom config system when `cloth-config` is not installed
-- Additional sound information such as specific sound file variations of sounds
 - Client-side commands for managing all config options
 
-# Disclaimer
+## Disclaimer
 - I am new to the Fabric modding community, and this is my first mod. It is likely that I have and will make mistakes, so definitely do try to connect with me or submit an issue if you encounter any bugs.
 
-# Additional Credits
+## Additional Credits
 - Nia for posting the mod idea
 - dicedpixels for creating the initial core mixin
 - Felix14_v2 for Russian localization
