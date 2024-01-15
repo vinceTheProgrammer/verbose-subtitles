@@ -16,6 +16,17 @@
   "text.autoconfig.verbose-subtitles.option.optionsId.labelStyleId.italic": "Italic",
   "text.autoconfig.verbose-subtitles.option.optionsId.labelStyleId.color": "Color",
 
+  "text.autoconfig.verbose-subtitles.option.optionsDisplayname": "Sound Displayname",
+  "text.autoconfig.verbose-subtitles.option.optionsDisplayname.showDisplayname": "Show Sound Displayname",
+  "text.autoconfig.verbose-subtitles.option.optionsDisplayname.showLabel": "Show Label",
+  "text.autoconfig.verbose-subtitles.option.optionsDisplayname.label": "Label",
+  "text.autoconfig.verbose-subtitles.option.optionsDisplayname.labelStyleDisplayname": "Label Style",
+  "text.autoconfig.verbose-subtitles.option.optionsDisplayname.labelStyleDisplayname.obfuscated": "Obfuscated",
+  "text.autoconfig.verbose-subtitles.option.optionsDisplayname.labelStyleDisplayname.bold": "Bold",
+  "text.autoconfig.verbose-subtitles.option.optionsDisplayname.labelStyleDisplayname.strikethrough": "Strikethrough",
+  "text.autoconfig.verbose-subtitles.option.optionsDisplayname.labelStyleDisplayname.underline": "Underline",
+  "text.autoconfig.verbose-subtitles.option.optionsDisplayname.labelStyleDisplayname.italic": "Italic",
+  "text.autoconfig.verbose-subtitles.option.optionsDisplayname.labelStyleDisplayname.color": "Color",
 
   "text.autoconfig.verbose-subtitles.option.optionsVolume": "Sound Volume",
   "text.autoconfig.verbose-subtitles.option.optionsVolume.showVolume": "Show Sound Volume",
@@ -71,7 +82,6 @@
   "text.autoconfig.verbose-subtitles.option.logToFile.@PrefixText": "Misc",
   "text.autoconfig.verbose-subtitles.option.logToFile": "Log Subtitles To File",
 
-  "text.autoconfig.verbose-subtitles.option.blacklistedSounds.@PrefixText": "Datasets",
   "text.autoconfig.verbose-subtitles.option.blacklistedSounds": "Blacklisted Sounds",
 
   "text.autoconfig.verbose-subtitles.fullLabel.id": "ID: ",

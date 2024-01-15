@@ -22,6 +22,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Objects;
 
 // Credit for most of this class goes to dicedpixels
 
@@ -45,6 +46,7 @@ abstract class MixinSubtitlesHud {
         if (VerboseSubtitlesConfig.INSTANCE.enabled) {
             if (!isBlocked) {
                 MutableText text = MutableText.of(TextContent.EMPTY);
+                Text displaynameText = applyFormatting(Text.of(VerboseSubtitlesConfig.INSTANCE.optionsDisplayname.label).copy(), VerboseSubtitlesConfig.INSTANCE.optionsDisplayname.labelStyleDisplayname.obfuscated, VerboseSubtitlesConfig.INSTANCE.optionsDisplayname.labelStyleDisplayname.bold, VerboseSubtitlesConfig.INSTANCE.optionsDisplayname.labelStyleDisplayname.strikethrough, VerboseSubtitlesConfig.INSTANCE.optionsDisplayname.labelStyleDisplayname.underline, VerboseSubtitlesConfig.INSTANCE.optionsDisplayname.labelStyleDisplayname.italic, VerboseSubtitlesConfig.INSTANCE.optionsDisplayname.labelStyleDisplayname.color);
                 Text idText = applyFormatting(Text.of(VerboseSubtitlesConfig.INSTANCE.optionsId.label).copy(), VerboseSubtitlesConfig.INSTANCE.optionsId.labelStyleId.obfuscated, VerboseSubtitlesConfig.INSTANCE.optionsId.labelStyleId.bold, VerboseSubtitlesConfig.INSTANCE.optionsId.labelStyleId.strikethrough, VerboseSubtitlesConfig.INSTANCE.optionsId.labelStyleId.underline, VerboseSubtitlesConfig.INSTANCE.optionsId.labelStyleId.italic, VerboseSubtitlesConfig.INSTANCE.optionsId.labelStyleId.color);
                 Text volumeText = applyFormatting(Text.of(VerboseSubtitlesConfig.INSTANCE.optionsVolume.label).copy(), VerboseSubtitlesConfig.INSTANCE.optionsVolume.labelStyleVolume.obfuscated, VerboseSubtitlesConfig.INSTANCE.optionsVolume.labelStyleVolume.bold, VerboseSubtitlesConfig.INSTANCE.optionsVolume.labelStyleVolume.strikethrough, VerboseSubtitlesConfig.INSTANCE.optionsVolume.labelStyleVolume.underline, VerboseSubtitlesConfig.INSTANCE.optionsVolume.labelStyleVolume.italic, VerboseSubtitlesConfig.INSTANCE.optionsVolume.labelStyleVolume.color);
                 Text pitchText = applyFormatting(Text.of(VerboseSubtitlesConfig.INSTANCE.optionsPitch.label).copy(), VerboseSubtitlesConfig.INSTANCE.optionsPitch.labelStylePitch.obfuscated, VerboseSubtitlesConfig.INSTANCE.optionsPitch.labelStylePitch.bold, VerboseSubtitlesConfig.INSTANCE.optionsPitch.labelStylePitch.strikethrough, VerboseSubtitlesConfig.INSTANCE.optionsPitch.labelStylePitch.underline, VerboseSubtitlesConfig.INSTANCE.optionsPitch.labelStylePitch.italic, VerboseSubtitlesConfig.INSTANCE.optionsPitch.labelStylePitch.color);
@@ -55,6 +57,13 @@ abstract class MixinSubtitlesHud {
                     if (VerboseSubtitlesConfig.INSTANCE.optionsId.showId) text.append(idText).append(sound.getId().toString()).append(" ");
                 } else {
                     if (VerboseSubtitlesConfig.INSTANCE.optionsId.showId) text.append(sound.getId().toString()).append(" ");
+                }
+
+                Text subtitleText = Objects.requireNonNullElse(soundSet.getSubtitle(), Text.of("nullDisplayName"));
+                if (VerboseSubtitlesConfig.INSTANCE.optionsDisplayname.showLabel) {
+                    if (VerboseSubtitlesConfig.INSTANCE.optionsDisplayname.showDisplayname) text.append(displaynameText).append(subtitleText.getString()).append(" ");
+                } else {
+                    if (VerboseSubtitlesConfig.INSTANCE.optionsDisplayname.showDisplayname) text.append(subtitleText.getString()).append(" ");
                 }
 
                 if (VerboseSubtitlesConfig.INSTANCE.optionsVolume.showLabel) {

@@ -23,6 +23,8 @@ public class VerboseSubtitlesConfig implements ConfigData {
     @ConfigEntry.Gui.CollapsibleObject
     public OptionsId optionsId = new OptionsId();
     @ConfigEntry.Gui.CollapsibleObject
+    public OptionsDisplayname optionsDisplayname = new OptionsDisplayname();
+    @ConfigEntry.Gui.CollapsibleObject
     public OptionsVolume optionsVolume = new OptionsVolume();
     @ConfigEntry.Gui.CollapsibleObject
     public OptionsPitch optionsPitch = new OptionsPitch();
@@ -32,7 +34,6 @@ public class VerboseSubtitlesConfig implements ConfigData {
     public OptionsPosition optionsPosition = new OptionsPosition();
     @ConfigEntry.Gui.PrefixText()
     public boolean logToFile = false;
-    @ConfigEntry.Gui.PrefixText()
     public List<String> blacklistedSounds = new ArrayList<>();
 
 
@@ -42,6 +43,14 @@ public class VerboseSubtitlesConfig implements ConfigData {
         public String label = "ID: ";
         @ConfigEntry.Gui.CollapsibleObject
         public LabelStyleId labelStyleId = new LabelStyleId();
+    }
+
+    public static class OptionsDisplayname {
+        public boolean showDisplayname = true;
+        public boolean showLabel = true;
+        public String label = "Displayname: ";
+        @ConfigEntry.Gui.CollapsibleObject
+        public LabelStyleDisplayname labelStyleDisplayname = new LabelStyleDisplayname();
     }
 
     public static class OptionsVolume {
@@ -77,6 +86,16 @@ public class VerboseSubtitlesConfig implements ConfigData {
     }
 
     public static class LabelStyleId {
+        public boolean obfuscated = false;
+        public boolean bold = false;
+        public boolean strikethrough = false;
+        public boolean underline = false;
+        public boolean italic = false;
+        @ConfigEntry.ColorPicker
+        public int color = 0xffffff;
+    }
+
+    public static class LabelStyleDisplayname {
         public boolean obfuscated = false;
         public boolean bold = false;
         public boolean strikethrough = false;
