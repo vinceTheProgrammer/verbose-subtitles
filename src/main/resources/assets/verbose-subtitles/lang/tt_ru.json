@@ -71,7 +71,6 @@
   "text.autoconfig.verbose-subtitles.option.logToFile.@PrefixText": "Төрле",
   "text.autoconfig.verbose-subtitles.option.logToFile": "Субтитрларны файлга җыю",
 
-  "text.autoconfig.verbose-subtitles.option.blacklistedSounds.@PrefixText": "Мәгълүмат җыентыгы",
   "text.autoconfig.verbose-subtitles.option.blacklistedSounds": "Кара исемлектәге тавышлар",
 
   "text.autoconfig.verbose-subtitles.fullLabel.id": "ID: ",

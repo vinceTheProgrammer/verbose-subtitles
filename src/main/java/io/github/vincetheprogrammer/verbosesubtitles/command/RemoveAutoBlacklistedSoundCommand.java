@@ -10,9 +10,7 @@ import io.github.vincetheprogrammer.verbosesubtitles.providers.BlacklistedSounds
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandManager;
 import net.fabricmc.fabric.api.client.command.v2.FabricClientCommandSource;
 import net.minecraft.command.CommandRegistryAccess;
-import net.minecraft.command.argument.IdentifierArgumentType;
 import net.minecraft.text.Text;
-import net.minecraft.util.Identifier;
 
 public class RemoveAutoBlacklistedSoundCommand {
 

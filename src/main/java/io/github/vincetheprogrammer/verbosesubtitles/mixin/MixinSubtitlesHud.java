@@ -2,6 +2,7 @@ package io.github.vincetheprogrammer.verbosesubtitles.mixin;
 
 import io.github.vincetheprogrammer.verbosesubtitles.VerboseSubtitles;
 import io.github.vincetheprogrammer.verbosesubtitles.config.VerboseSubtitlesConfig;
+import io.github.vincetheprogrammer.verbosesubtitles.runnables.SubtitleLoggerRunnable;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.hud.SubtitlesHud;
 import net.minecraft.client.gui.hud.SubtitlesHud.SubtitleEntry;
@@ -20,9 +21,9 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import java.io.IOException;
 import java.util.List;
 import java.util.Objects;
+import java.util.concurrent.ExecutorService;
 
 // Credit for most of this class goes to dicedpixels
 
@@ -94,13 +95,10 @@ abstract class MixinSubtitlesHud {
 
                 if (!VerboseSubtitlesConfig.INSTANCE.logToFile) VerboseSubtitles.closeFileWriter();
 
-                if (VerboseSubtitlesConfig.INSTANCE.logToFile && VerboseSubtitles.getFileWriter() != null) {
-                    try {
-                        VerboseSubtitles.getFileWriter().write(newEntry.getText().getString() + System.lineSeparator());
-                        VerboseSubtitles.getFileWriter().flush();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
+                if (VerboseSubtitlesConfig.INSTANCE.logToFile) {
+                    ExecutorService subtitlesLoggingService = VerboseSubtitles.getSubtitleLoggingService();
+                    SubtitleLoggerRunnable subtitleLogger = new SubtitleLoggerRunnable(newEntry, VerboseSubtitles.getFileWriter());
+                    subtitlesLoggingService.execute(subtitleLogger);
                 }
 
                 this.entries.add(newEntry);

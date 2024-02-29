@@ -14,135 +14,135 @@ import java.util.List;
 @Config(name = "verbose-subtitles")
 public class VerboseSubtitlesConfig implements ConfigData {
     @ConfigEntry.Gui.Excluded
-    public static VerboseSubtitlesConfig INSTANCE;
+    public static final VerboseSubtitlesConfig INSTANCE;
     @ConfigEntry.Gui.Excluded
     private static ConfigHolder<VerboseSubtitlesConfig> CONFIG_HOLDER;
 //    @ConfigEntry.Category("general-category")
     public boolean enabled = true;
     @ConfigEntry.Gui.PrefixText()
     @ConfigEntry.Gui.CollapsibleObject
-    public OptionsId optionsId = new OptionsId();
+    public final OptionsId optionsId = new OptionsId();
     @ConfigEntry.Gui.CollapsibleObject
-    public OptionsDisplayname optionsDisplayname = new OptionsDisplayname();
+    public final OptionsDisplayname optionsDisplayname = new OptionsDisplayname();
     @ConfigEntry.Gui.CollapsibleObject
-    public OptionsVolume optionsVolume = new OptionsVolume();
+    public final OptionsVolume optionsVolume = new OptionsVolume();
     @ConfigEntry.Gui.CollapsibleObject
-    public OptionsPitch optionsPitch = new OptionsPitch();
+    public final OptionsPitch optionsPitch = new OptionsPitch();
     @ConfigEntry.Gui.CollapsibleObject
-    public OptionsVariant optionsVariant = new OptionsVariant();
+    public final OptionsVariant optionsVariant = new OptionsVariant();
     @ConfigEntry.Gui.CollapsibleObject
-    public OptionsPosition optionsPosition = new OptionsPosition();
+    public final OptionsPosition optionsPosition = new OptionsPosition();
     @ConfigEntry.Gui.PrefixText()
-    public boolean logToFile = false;
+    public final boolean logToFile = false;
     public List<String> blacklistedSounds = new ArrayList<>();
 
 
     public static class OptionsId {
-        public boolean showId = true;
-        public boolean showLabel = true;
-        public String label = "ID: ";
+        public final boolean showId = true;
+        public final boolean showLabel = true;
+        public final String label = "ID: ";
         @ConfigEntry.Gui.CollapsibleObject
-        public LabelStyleId labelStyleId = new LabelStyleId();
+        public final LabelStyleId labelStyleId = new LabelStyleId();
     }
 
     public static class OptionsDisplayname {
-        public boolean showDisplayname = true;
-        public boolean showLabel = true;
-        public String label = "Displayname: ";
+        public final boolean showDisplayname = true;
+        public final boolean showLabel = true;
+        public final String label = "Displayname: ";
         @ConfigEntry.Gui.CollapsibleObject
-        public LabelStyleDisplayname labelStyleDisplayname = new LabelStyleDisplayname();
+        public final LabelStyleDisplayname labelStyleDisplayname = new LabelStyleDisplayname();
     }
 
     public static class OptionsVolume {
-        public boolean showVolume = true;
-        public boolean showLabel = true;
-        public String label = "Volume: ";
+        public final boolean showVolume = true;
+        public final boolean showLabel = true;
+        public final String label = "Volume: ";
         @ConfigEntry.Gui.CollapsibleObject
-        public LabelStyleVolume labelStyleVolume = new LabelStyleVolume();
+        public final LabelStyleVolume labelStyleVolume = new LabelStyleVolume();
     }
 
     public static class OptionsPitch {
-        public boolean showPitch = true;
-        public boolean showLabel = true;
-        public String label = "Pitch: ";
+        public final boolean showPitch = true;
+        public final boolean showLabel = true;
+        public final String label = "Pitch: ";
         @ConfigEntry.Gui.CollapsibleObject
-        public LabelStylePitch labelStylePitch = new LabelStylePitch();
+        public final LabelStylePitch labelStylePitch = new LabelStylePitch();
     }
 
     public static class OptionsVariant {
-        public boolean showVariant = true;
-        public boolean showLabel = true;
-        public String label = "Variant: ";
+        public final boolean showVariant = true;
+        public final boolean showLabel = true;
+        public final String label = "Variant: ";
         @ConfigEntry.Gui.CollapsibleObject
-        public LabelStyleVariant labelStyleVariant = new LabelStyleVariant();
+        public final LabelStyleVariant labelStyleVariant = new LabelStyleVariant();
     }
 
     public static class OptionsPosition {
-        public boolean showPosition = true;
-        public boolean showLabel = true;
-        public String label = "Position: ";
+        public final boolean showPosition = true;
+        public final boolean showLabel = true;
+        public final String label = "Position: ";
         @ConfigEntry.Gui.CollapsibleObject
-        public LabelStylePosition labelStylePosition = new LabelStylePosition();
+        public final LabelStylePosition labelStylePosition = new LabelStylePosition();
     }
 
     public static class LabelStyleId {
-        public boolean obfuscated = false;
-        public boolean bold = false;
-        public boolean strikethrough = false;
-        public boolean underline = false;
-        public boolean italic = false;
+        public final boolean obfuscated = false;
+        public final boolean bold = false;
+        public final boolean strikethrough = false;
+        public final boolean underline = false;
+        public final boolean italic = false;
         @ConfigEntry.ColorPicker
-        public int color = 0xffffff;
+        public final int color = 0xffffff;
     }
 
     public static class LabelStyleDisplayname {
-        public boolean obfuscated = false;
-        public boolean bold = false;
-        public boolean strikethrough = false;
-        public boolean underline = false;
-        public boolean italic = false;
+        public final boolean obfuscated = false;
+        public final boolean bold = false;
+        public final boolean strikethrough = false;
+        public final boolean underline = false;
+        public final boolean italic = false;
         @ConfigEntry.ColorPicker
-        public int color = 0xffffff;
+        public final int color = 0xffffff;
     }
 
     public static class LabelStyleVolume {
-        public boolean obfuscated = false;
-        public boolean bold = false;
-        public boolean strikethrough = false;
-        public boolean underline = false;
-        public boolean italic = false;
+        public final boolean obfuscated = false;
+        public final boolean bold = false;
+        public final boolean strikethrough = false;
+        public final boolean underline = false;
+        public final boolean italic = false;
         @ConfigEntry.ColorPicker
-        public int color = 0xffffff;
+        public final int color = 0xffffff;
     }
 
     public static class LabelStylePitch {
-        public boolean obfuscated = false;
-        public boolean bold = false;
-        public boolean strikethrough = false;
-        public boolean underline = false;
-        public boolean italic = false;
+        public final boolean obfuscated = false;
+        public final boolean bold = false;
+        public final boolean strikethrough = false;
+        public final boolean underline = false;
+        public final boolean italic = false;
         @ConfigEntry.ColorPicker
-        public int color = 0xffffff;
+        public final int color = 0xffffff;
     }
 
     public static class LabelStyleVariant {
-        public boolean obfuscated = false;
-        public boolean bold = false;
-        public boolean strikethrough = false;
-        public boolean underline = false;
-        public boolean italic = false;
+        public final boolean obfuscated = false;
+        public final boolean bold = false;
+        public final boolean strikethrough = false;
+        public final boolean underline = false;
+        public final boolean italic = false;
         @ConfigEntry.ColorPicker
-        public int color = 0xffffff;
+        public final int color = 0xffffff;
     }
 
     public static class LabelStylePosition {
-        public boolean obfuscated = false;
-        public boolean bold = false;
-        public boolean strikethrough = false;
-        public boolean underline = false;
-        public boolean italic = false;
+        public final boolean obfuscated = false;
+        public final boolean bold = false;
+        public final boolean strikethrough = false;
+        public final boolean underline = false;
+        public final boolean italic = false;
         @ConfigEntry.ColorPicker
-        public int color = 0xffffff;
+        public final int color = 0xffffff;
     }
 
     @Override

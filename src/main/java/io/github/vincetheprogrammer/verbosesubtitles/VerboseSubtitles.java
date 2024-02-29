@@ -4,9 +4,9 @@ import io.github.vincetheprogrammer.verbosesubtitles.command.AddAutoBlacklistedS
 import io.github.vincetheprogrammer.verbosesubtitles.command.AddCustomBlacklistedSoundCommand;
 import io.github.vincetheprogrammer.verbosesubtitles.command.ListBlacklistedSoundsCommand;
 import io.github.vincetheprogrammer.verbosesubtitles.command.RemoveAutoBlacklistedSoundCommand;
-import io.github.vincetheprogrammer.verbosesubtitles.config.VerboseSubtitlesConfig;
 import io.github.vincetheprogrammer.verbosesubtitles.event.KeyInputHandler;
 import io.github.vincetheprogrammer.verbosesubtitles.listener.ReloadListener;
+import io.github.vincetheprogrammer.verbosesubtitles.runnables.CloseFileWriterRunnable;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandRegistrationCallback;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
@@ -16,20 +16,26 @@ import org.slf4j.LoggerFactory;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class VerboseSubtitles implements ClientModInitializer {
     public static final Logger LOGGER = LoggerFactory.getLogger("verbose-subtitles");
     private static FileWriter fileWriter;
+    private static ExecutorService subtitleLoggingService;
 
     @Override
     public void onInitializeClient() {
-        LOGGER.info("Hello Fabric world!");
-        ReloadListener reloadListener = new ReloadListener();
-        ResourceManagerHelper.get(ResourceType.CLIENT_RESOURCES).registerReloadListener(reloadListener);
+        registerReloadListener();
         KeyInputHandler.register();
         registerCommands();
-        if (VerboseSubtitlesConfig.INSTANCE.logToFile) initFileWriter();
-        Runtime.getRuntime().addShutdownHook(new Thread(this::closeFileWriterNonStatic));
+        registerShutdownHook();
+        LOGGER.info("Initialized");
+    }
+
+    private void registerReloadListener() {
+        ReloadListener reloadListener = new ReloadListener();
+        ResourceManagerHelper.get(ResourceType.CLIENT_RESOURCES).registerReloadListener(reloadListener);
     }
 
     private void registerCommands() {
@@ -39,43 +45,44 @@ public class VerboseSubtitles implements ClientModInitializer {
         ClientCommandRegistrationCallback.EVENT.register(ListBlacklistedSoundsCommand::register);
     }
 
-    private static FileWriter initFileWriter() {
-        try {
-            fileWriter = new FileWriter("verbose-subtitles-log.txt", true);
-            return fileWriter;
-        } catch (IOException e) {
-            e.printStackTrace();
+    private static void initializeFileWriter() {
+        if (fileWriter == null) {
+            initializeSubtitleLoggingService();
+            try {
+                fileWriter = new FileWriter("verbose-subtitles-log.txt", true);
+            } catch (IOException e) {
+                LOGGER.error("Error initializing FileWriter", e);
+            }
         }
-        return null;
     }
 
     public static FileWriter getFileWriter() {
-        if (fileWriter == null) return initFileWriter();
-        else return fileWriter;
+        initializeFileWriter();
+        return fileWriter;
+    }
+
+    private static void initializeSubtitleLoggingService() {
+        if (subtitleLoggingService == null || subtitleLoggingService.isShutdown()) {
+            subtitleLoggingService = Executors.newSingleThreadExecutor();
+        }
+    }
+
+    public static ExecutorService getSubtitleLoggingService() {
+        initializeSubtitleLoggingService();
+        return subtitleLoggingService;
     }
 
     public static void closeFileWriter() {
-        try {
-            if (fileWriter != null) {
-                fileWriter.close();
-                fileWriter = null;
-                LOGGER.info("successfully closed FileWriter");
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-    public void closeFileWriterNonStatic() {
-        try {
-            if (fileWriter != null) {
-                fileWriter.close();
-                fileWriter = null;
-                LOGGER.info("successfully closed FileWriter");
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
+        if (fileWriter != null) {
+            if (subtitleLoggingService.isShutdown()) initializeSubtitleLoggingService();
+            CloseFileWriterRunnable closeFileWriterRunnable = new CloseFileWriterRunnable(fileWriter);
+            subtitleLoggingService.execute(closeFileWriterRunnable);
+            fileWriter = null;
+            subtitleLoggingService.shutdown();
         }
     }
 
-
+    private void registerShutdownHook() {
+        Runtime.getRuntime().addShutdownHook(new Thread(new CloseFileWriterRunnable(fileWriter)));
+    }
 }
