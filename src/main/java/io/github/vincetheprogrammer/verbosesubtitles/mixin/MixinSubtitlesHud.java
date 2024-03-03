@@ -10,7 +10,6 @@ import net.minecraft.client.sound.SoundInstance;
 import net.minecraft.client.sound.WeightedSoundSet;
 import net.minecraft.text.MutableText;
 import net.minecraft.text.Text;
-import net.minecraft.text.TextContent;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.math.Vec3d;
 import org.spongepowered.asm.mixin.Final;
@@ -35,7 +34,7 @@ abstract class MixinSubtitlesHud {
     @Shadow @Final private MinecraftClient client;
 
     @Inject(method = "onSoundPlayed", at = @At("HEAD"), cancellable = true)
-    private void verboseSubtitles$addAnySoundToSubtitles(SoundInstance sound, WeightedSoundSet soundSet, CallbackInfo ci) {
+    private void verboseSubtitles$addAnySoundToSubtitles(SoundInstance sound, WeightedSoundSet soundSet, float range, CallbackInfo ci) {
         boolean isBlocked = false;
         for (String blacklistedSound : VerboseSubtitlesConfig.INSTANCE.blacklistedSounds) {
             if (sound.getId().toString().startsWith(blacklistedSound)) {
@@ -45,7 +44,7 @@ abstract class MixinSubtitlesHud {
         }
         if (VerboseSubtitlesConfig.INSTANCE.enabled) {
             if (!isBlocked) {
-                MutableText text = MutableText.of(TextContent.EMPTY);
+                MutableText text = MutableText.of(Text.of("").getContent());
                 Text displaynameText = applyFormatting(Text.of(VerboseSubtitlesConfig.INSTANCE.optionsDisplayname.label).copy(), VerboseSubtitlesConfig.INSTANCE.optionsDisplayname.labelStyleDisplayname.obfuscated, VerboseSubtitlesConfig.INSTANCE.optionsDisplayname.labelStyleDisplayname.bold, VerboseSubtitlesConfig.INSTANCE.optionsDisplayname.labelStyleDisplayname.strikethrough, VerboseSubtitlesConfig.INSTANCE.optionsDisplayname.labelStyleDisplayname.underline, VerboseSubtitlesConfig.INSTANCE.optionsDisplayname.labelStyleDisplayname.italic, VerboseSubtitlesConfig.INSTANCE.optionsDisplayname.labelStyleDisplayname.color);
                 Text idText = applyFormatting(Text.of(VerboseSubtitlesConfig.INSTANCE.optionsId.label).copy(), VerboseSubtitlesConfig.INSTANCE.optionsId.labelStyleId.obfuscated, VerboseSubtitlesConfig.INSTANCE.optionsId.labelStyleId.bold, VerboseSubtitlesConfig.INSTANCE.optionsId.labelStyleId.strikethrough, VerboseSubtitlesConfig.INSTANCE.optionsId.labelStyleId.underline, VerboseSubtitlesConfig.INSTANCE.optionsId.labelStyleId.italic, VerboseSubtitlesConfig.INSTANCE.optionsId.labelStyleId.color);
                 Text volumeText = applyFormatting(Text.of(VerboseSubtitlesConfig.INSTANCE.optionsVolume.label).copy(), VerboseSubtitlesConfig.INSTANCE.optionsVolume.labelStyleVolume.obfuscated, VerboseSubtitlesConfig.INSTANCE.optionsVolume.labelStyleVolume.bold, VerboseSubtitlesConfig.INSTANCE.optionsVolume.labelStyleVolume.strikethrough, VerboseSubtitlesConfig.INSTANCE.optionsVolume.labelStyleVolume.underline, VerboseSubtitlesConfig.INSTANCE.optionsVolume.labelStyleVolume.italic, VerboseSubtitlesConfig.INSTANCE.optionsVolume.labelStyleVolume.color);
@@ -90,7 +89,7 @@ abstract class MixinSubtitlesHud {
                     if (VerboseSubtitlesConfig.INSTANCE.optionsPosition.showPosition) text.append(getRelativePositionString(sound)).append(" ");
                 }
 
-                SubtitleEntry newEntry = new SubtitleEntry(text, new Vec3d(sound.getX(), sound.getY(), sound.getZ()));
+                SubtitleEntry newEntry = new SubtitleEntry(text, range, new Vec3d(sound.getX(), sound.getY(), sound.getZ()));
 
                 if (!VerboseSubtitlesConfig.INSTANCE.logToFile) VerboseSubtitles.closeFileWriter();
 
