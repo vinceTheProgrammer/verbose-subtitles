@@ -2,8 +2,6 @@ package io.github.vincetheprogrammer.verbosesubtitles.mixin;
 
 import io.github.vincetheprogrammer.verbosesubtitles.VerboseSubtitles;
 import io.github.vincetheprogrammer.verbosesubtitles.config.VerboseSubtitlesConfig;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.hud.SubtitlesHud;
 import net.minecraft.client.gui.hud.SubtitlesHud.SubtitleEntry;
@@ -28,7 +26,6 @@ import java.util.Objects;
 // Credit for most of this class goes to dicedpixels
 
 @Mixin(SubtitlesHud.class)
-@Environment(EnvType.CLIENT)
 abstract class MixinSubtitlesHud {
     @Shadow
     @Final

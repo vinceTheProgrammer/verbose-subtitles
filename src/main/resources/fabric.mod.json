@@ -38,11 +38,12 @@
     "verbose-subtitles.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.14.19",
-    "fabric-api": ">=0.80.0+1.19.4",
-    "minecraft": ">=1.19.4-",
-    "java": ">=17",
-    "cloth-config": ">=10.0.96",
-    "modmenu": ">=6.2.2"
-  }
+    "fabricloader": ">=0.16.9",
+    "fabric-api": ">=0.114.0+1.21.3",
+    "minecraft": "1.21.3",
+    "java": ">=21",
+    "cloth-config": ">=16.0.141",
+    "modmenu": ">=12.0.0"
+  },
+  "accessWidener": "verbose-subtitles.accesswidener"
 }

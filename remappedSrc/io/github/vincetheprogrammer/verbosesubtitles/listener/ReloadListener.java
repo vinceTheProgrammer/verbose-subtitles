@@ -11,7 +11,7 @@ public class ReloadListener implements SimpleSynchronousResourceReloadListener {
 
     @Override
     public Identifier getFabricId() {
-        return Identifier.of("verbose-subtitles", "reload_listener");
+        return new Identifier("verbose-subtitles", "reload_listener");
     }
 
     @Override
