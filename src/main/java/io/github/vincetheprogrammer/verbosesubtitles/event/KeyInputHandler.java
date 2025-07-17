@@ -31,7 +31,7 @@ public class KeyInputHandler {
         toggleVerboseSubtitlesKey = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 KEY_TOGGLE_SOUND_INFO,
                 InputUtil.Type.KEYSYM,
-                GLFW.GLFW_KEY_G,
+                GLFW.GLFW_KEY_H,
                 KEY_CATEGORY_SOUND_INFO
         ));
         toggleVanillaSubtitlesKey = KeyBindingHelper.registerKeyBinding(new KeyBinding(

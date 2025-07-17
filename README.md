@@ -6,6 +6,7 @@ View additional information for the various sounds played in game. Replaces vani
 - Robust set of customization options
 - Blacklist to prevent certain sounds from displaying at all
 - Client-side commands for managing sound blacklist
+- Keybinds: toggle subtitles (defaults to v); toggle verbose subtitles (defaults to g for <1.21.6 / h for >=1.21.6)
 
 ## Available sound properties
 - sound ID
